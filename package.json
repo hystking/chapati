@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "serve": "live-server public",
+    "watch": "npm run watchify & npm run jade -- -w & npm run stylus -- -w & npm run postcss -- -w; wait",
+    "watchify": "watchify src/js/app.js -o \"uglifyjs > public/js/app.js\" -v",
+    "jade": "jade src/jade/[^_]*.jade -o public",
+    "stylus": "stylus src/stylus/style.styl -o public/css",
+    "postcss": "postcss --u autoprefixer public/css/style.css > public/css/style.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "browserify": "latest",
+    "jade": "latest",
+    "live-server": "^0.9.1",
+    "postcss": "latest",
+    "postcss-cli": "latest",
+    "stylus": "latest",
+    "uglifyjs": "^2.4.10",
+    "watchify": "latest"
+  }
+}
