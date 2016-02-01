@@ -11,11 +11,11 @@
     "autoprefixer": "latest",
     "browserify": "latest",
     "jade": "latest",
-    "live-server": "^0.9.1",
+    "live-server": "latest",
     "postcss": "latest",
     "postcss-cli": "latest",
     "stylus": "latest",
-    "uglifyjs": "^2.4.10",
+    "uglifyjs": "latest",
     "watchify": "latest"
   }
 }
