@@ -1,8 +1,27 @@
-doctype
-html
-  head
-    title title
-    script(src="js/app.js")
-    link(href="css/index.css", rel="stylesheet")
-  body
-    h1 allo
+extend base
+
+block append meta
+  //- Meta Infomations
+  title= meta.title
+  meta(name="description", content=meta.description)
+  meta(name="keywords", content=meta.keywords)
+
+  //- Facebook OGP
+  meta(name="og:title", content=meta.title)
+  meta(name="og:description", content=meta.description)
+  meta(name="og:type", content="website")
+  meta(name="og:url", content=meta.urlIndex)
+  meta(name="og:image", content=meta.ogImage)
+  meta(name="og:site_name", content=meta.title)
+
+  //- Twitter Card
+  meta(name="twitter:card", content="summary_large_image")
+  meta(name="twitter:title", content=meta.title)
+  meta(name="twitter:description", content=meta.description)
+  meta(name="twitter:image:src", content=meta.ogImage)
+
+block content
+  main(class=meta.slug) main
+
+block append stylesheet
+  link(href="css/index.css", rel="stylesheet")

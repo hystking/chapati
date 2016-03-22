@@ -17,6 +17,7 @@
     "cssnano": "latest",
     "jade": "latest",
     "live-server": "latest",
+    "page": "latest",
     "postcss": "latest",
     "postcss-cli": "latest",
     "stylus": "latest",
@@ -24,6 +25,15 @@
     "watchify": "latest"
   },
   "browserify": {
-    "transform": [["babelify", { "presets": ["es2015"] }]]
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
   }
 }
