@@ -1,15 +1,20 @@
 {
   "scripts": {
+    "start": "npm run serve & npm run watch",
     "serve": "live-server public",
-    "watch": "npm run watchify & npm run jade -- -w & npm run stylus -- -w & npm run postcss -- -w; wait",
+    "watch": "npm run watchify & npm run jade -- -w & npm run stylus -- -w; wait",
     "watchify": "watchify src/js/app.js -o \"uglifyjs > public/js/app.js\" -v",
-    "jade": "jade src/jade/[^_]*.jade -o public",
-    "stylus": "stylus src/stylus/style.styl -o public/css",
-    "postcss": "postcss --u autoprefixer public/css/style.css > public/css/style.css"
+    "jade": "jade src/jade/index.jade -O jade.json -o public",
+    "stylus": "stylus src/stylus/index.styl -o public/css --include public/css",
+    "postcss": "postcss --config postcss.json --replace public/css/index.css"
   },
   "devDependencies": {
     "autoprefixer": "latest",
+    "babel-preset-es2015": "latest",
+    "babelify": "latest",
     "browserify": "latest",
+    "css-mqpacker": "latest",
+    "cssnano": "latest",
     "jade": "latest",
     "live-server": "latest",
     "postcss": "latest",
@@ -17,5 +22,8 @@
     "stylus": "latest",
     "uglifyjs": "latest",
     "watchify": "latest"
+  },
+  "browserify": {
+    "transform": [["babelify", { "presets": ["es2015"] }]]
   }
 }
