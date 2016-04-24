@@ -25,15 +25,6 @@
     "watchify": "latest"
   },
   "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015"
-          ]
-        }
-      ]
-    ]
+    "transform": ["babelify"]
   }
 }
