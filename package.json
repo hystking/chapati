@@ -2,11 +2,11 @@
   "scripts": {
     "start": "npm run serve & npm run watch",
     "serve": "live-server public",
-    "watch": "npm run watchify & npm run jade -- -w & npm run stylus -- -w; wait",
-    "watchify": "watchify src/js/app.js -o \"uglifyjs > public/js/app.js\" -v",
-    "jade": "jade src/jade/index.jade -O jade.json -o public",
-    "stylus": "stylus src/stylus/index.styl -o public/css --include public/css",
-    "postcss": "postcss --config postcss.json --replace public/css/index.css"
+    "watch": "npm run watchify & npm run jade -- -w & npm run stylus -- -w & npm run postcss -- --watch; wait",
+    "watchify": "watchify src/js/app.js -o \"uglifyjs > $(cat lib/root.txt)js/app.js\" -v",
+    "jade": "jade $(cat lib/jade-files.txt) -O jade.json -o $(cat lib/root.txt)",
+    "stylus": "stylus $(cat lib/stylus-files.txt) -o temp/css --include $(cat lib/root.txt)css",
+    "postcss": "postcss --config postcss.json --dir $(cat lib/root.txt)css $(cat lib/postcss-files.txt)"
   },
   "devDependencies": {
     "autoprefixer": "latest",
