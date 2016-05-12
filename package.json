@@ -16,7 +16,7 @@
     "css-mqpacker": "latest",
     "cssnano": "latest",
     "jade": "latest",
-    "live-server": "latest",
+    "live-server": "hystking/live-server",
     "postcss": "latest",
     "postcss-cli": "latest",
     "stylus": "latest",
