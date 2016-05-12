@@ -2,7 +2,7 @@
   "scripts": {
     "start": "npm run serve & npm run watch",
     "serve": "live-server public",
-    "watch": "npm run watchify & npm run jade -- -w & npm run stylus -- -w & npm run postcss -- --watch; wait",
+    "watch": "npm run stylus; npm run watchify & npm run jade -- -w & npm run stylus -- -w & npm run postcss -- --watch; wait",
     "watchify": "watchify src/js/app.js -o \"uglifyjs > $(cat lib/root.txt)js/app.js\" -v",
     "jade": "jade $(cat lib/jade-files.txt) -O jade.json -o $(cat lib/root.txt)",
     "stylus": "stylus $(cat lib/stylus-files.txt) -o temp/css --include $(cat lib/root.txt)css",
