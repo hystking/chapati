@@ -6,7 +6,8 @@
     "watchify": "watchify src/js/app.js -o \"uglifyjs > $(cat lib/root.txt)js/app.js\" -v",
     "jade": "jade $(cat lib/jade-files.txt) -O jade.json -o $(cat lib/root.txt)",
     "stylus": "stylus $(cat lib/stylus-files.txt) -o temp/css --include $(cat lib/root.txt)css",
-    "postcss": "postcss --config postcss.json --dir $(cat lib/root.txt)css $(cat lib/postcss-files.txt)"
+    "postcss": "postcss --config postcss.json --dir $(cat lib/root.txt)css $(cat lib/postcss-files.txt)",
+    "postinstall": "npm shrinkwrap --dev"
   },
   "devDependencies": {
     "autoprefixer": "latest",
