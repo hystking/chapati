@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "npm run serve & npm run watch",
-    "serve": "live-server public",
+    "serve": "live-server $(cat lib/root.txt)",
     "watch": "npm run stylus; npm run watchify & npm run jade -- -w & npm run stylus -- -w & npm run postcss -- --watch; wait",
     "watchify": "watchify src/js/app.js -o \"uglifyjs > $(cat lib/root.txt)js/app.js\" -v",
     "jade": "jade $(cat lib/jade-files.txt) -O jade.json -o $(cat lib/root.txt)",
