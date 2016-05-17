@@ -21,7 +21,7 @@
     "postcss": "latest",
     "postcss-cli": "latest",
     "stylus": "latest",
-    "uglifyjs": "latest",
+    "uglify-js": "latest",
     "watchify": "latest"
   },
   "browserify": {
