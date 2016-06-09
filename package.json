@@ -2,9 +2,9 @@
   "scripts": {
     "start": "npm run serve & npm run watch",
     "serve": "live-server $(cat config/root.txt)",
-    "watch": "npm run stylus; npm run watchify & npm run jade -- -w & npm run stylus -- -w & npm run postcss -- --watch; wait",
+    "watch": "npm run stylus; npm run watchify & npm run pug -- -w & npm run stylus -- -w & npm run postcss -- --watch; wait",
     "watchify": "watchify src/js/app.js -o \"uglifyjs > $(cat config/root.txt)js/app.js\" -v",
-    "jade": "jade $(cat config/jade-files.txt) -O config/jade.json -o $(cat config/root.txt)",
+    "pug": "pug $(cat config/pug-files.txt) -O config/pug.json -o $(cat config/root.txt)",
     "stylus": "stylus $(cat config/stylus-files.txt) -o temp/css --include $(cat config/root.txt)css",
     "postcss": "postcss --config config/postcss.json --dir $(cat config/root.txt)css $(cat config/postcss-files.txt)",
     "postinstall": "npm shrinkwrap --dev"
@@ -16,15 +16,17 @@
     "browserify": "latest",
     "css-mqpacker": "latest",
     "cssnano": "latest",
-    "jade": "latest",
     "live-server": "hystking/live-server",
     "postcss": "latest",
     "postcss-cli": "latest",
+    "pug-cli": "latest",
     "stylus": "latest",
     "uglify-js": "latest",
     "watchify": "latest"
   },
   "browserify": {
-    "transform": ["babelify"]
+    "transform": [
+      "babelify"
+    ]
   }
 }
