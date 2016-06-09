@@ -6,23 +6,22 @@
     "watchify": "watchify src/js/app.js -o \"uglifyjs > $(cat config/root.txt)js/app.js\" -v",
     "pug": "pug $(cat config/pug-files.txt) -O config/pug.json -o $(cat config/root.txt)",
     "stylus": "stylus $(cat config/stylus-files.txt) -o temp/css --include $(cat config/root.txt)css",
-    "postcss": "postcss --config config/postcss.json --dir $(cat config/root.txt)css $(cat config/postcss-files.txt)",
-    "postinstall": "npm shrinkwrap --dev"
+    "postcss": "postcss --config config/postcss.json --dir $(cat config/root.txt)css $(cat config/postcss-files.txt)"
   },
   "devDependencies": {
-    "autoprefixer": "latest",
-    "babel-preset-es2015": "latest",
-    "babelify": "latest",
-    "browserify": "latest",
-    "css-mqpacker": "latest",
-    "cssnano": "latest",
-    "live-server": "hystking/live-server",
-    "postcss": "latest",
-    "postcss-cli": "latest",
-    "pug-cli": "latest",
-    "stylus": "latest",
-    "uglify-js": "latest",
-    "watchify": "latest"
+    "autoprefixer": "^6.3.6",
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.7.0",
+    "live-server": "^1.0.0",
+    "postcss": "^5.0.21",
+    "postcss-cli": "^2.5.2",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.5",
+    "uglify-js": "^2.6.2",
+    "watchify": "^3.7.0"
   },
   "browserify": {
     "transform": [
