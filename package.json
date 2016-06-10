@@ -15,7 +15,7 @@
     "browserify": "^13.0.1",
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.7.0",
-    "live-server": "^1.0.0",
+    "live-server": "hystking/live-server",
     "postcss-cli": "^2.5.2",
     "pug-cli": "^1.0.0-alpha6",
     "stylus": "^0.54.5",
