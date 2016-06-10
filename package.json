@@ -16,7 +16,6 @@
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.7.0",
     "live-server": "^1.0.0",
-    "postcss": "^5.0.21",
     "postcss-cli": "^2.5.2",
     "pug-cli": "^1.0.0-alpha6",
     "stylus": "^0.54.5",
