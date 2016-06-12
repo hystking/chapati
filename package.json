@@ -15,11 +15,7 @@
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.7.0",
     "live-server": "hystking/live-server",
-    "postcss-calc": "^5.2.1",
     "postcss-cli": "^2.5.2",
-    "postcss-mixins": "^4.0.2",
-    "postcss-nested": "^1.0.0",
-    "postcss-simple-vars": "^2.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "uglify-js": "^2.6.2",
     "watchify": "^3.7.0"

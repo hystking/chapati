@@ -1,9 +1,5 @@
 {
   "use": [
-    "postcss-simple-vars",
-    "postcss-nested",
-    "postcss-mixins",
-    "postcss-calc",
     "autoprefixer",
     "css-mqpacker",
     "cssnano"
