@@ -1,5 +1,13 @@
 {
-  "use": ["autoprefixer", "css-mqpacker", "cssnano"],
+  "use": [
+    "postcss-simple-vars",
+    "postcss-nested",
+    "postcss-mixins",
+    "postcss-calc",
+    "autoprefixer",
+    "css-mqpacker",
+    "cssnano"
+  ],
   "autoprefixer": {
     "browsers": [
       "ie >= 10",

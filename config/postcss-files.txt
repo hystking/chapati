@@ -1,1 +1,1 @@
-temp/css/*.css
+src/css/style.css

@@ -2,10 +2,9 @@
   "scripts": {
     "start": "npm run serve & npm run watch",
     "serve": "live-server $(cat config/root.txt)",
-    "watch": "npm run stylus; npm run watchify & npm run pug -- -w & npm run stylus -- -w & npm run postcss -- --watch; wait",
+    "watch": "npm run watchify & npm run pug -- -w & npm run postcss -- --watch; wait",
     "watchify": "watchify src/js/app.js -o \"uglifyjs > $(cat config/root.txt)js/app.js\" -v",
     "pug": "pug $(cat config/pug-files.txt) -O config/pug.json -o $(cat config/root.txt)",
-    "stylus": "stylus $(cat config/stylus-files.txt) -o temp/css --include $(cat config/root.txt)css",
     "postcss": "postcss --config config/postcss.json --dir $(cat config/root.txt)css $(cat config/postcss-files.txt)"
   },
   "devDependencies": {
@@ -16,9 +15,12 @@
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.7.0",
     "live-server": "hystking/live-server",
+    "postcss-calc": "^5.2.1",
     "postcss-cli": "^2.5.2",
+    "postcss-mixins": "^4.0.2",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^2.0.0",
     "pug-cli": "^1.0.0-alpha6",
-    "stylus": "^0.54.5",
     "uglify-js": "^2.6.2",
     "watchify": "^3.7.0"
   },
