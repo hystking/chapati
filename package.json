@@ -1,11 +1,16 @@
 {
+  "config": {
+    "root": "public/",
+    "pug_files": "src/pug/index.pug",
+    "postcss_files": "src/css/style.css"
+  },
   "scripts": {
     "start": "npm run serve & npm run watch",
-    "serve": "live-server $(cat config/root.txt)",
+    "serve": "live-server ${npm_package_config_root}",
     "watch": "npm run watchify & npm run pug -- -w & npm run postcss -- --watch; wait",
-    "watchify": "watchify src/js/app.js -o \"uglifyjs > $(cat config/root.txt)js/app.js\" -v",
-    "pug": "pug $(cat config/pug-files.txt) -O config/pug.json -o $(cat config/root.txt)",
-    "postcss": "postcss --config config/postcss.json --dir $(cat config/root.txt)css $(cat config/postcss-files.txt)"
+    "watchify": "watchify src/js/app.js -o \"uglifyjs > ${npm_package_config_root}js/app.js\" -v",
+    "pug": "pug ${npm_package_config_pug_files} -O pug.json -o ${npm_package_config_root}",
+    "postcss": "postcss --config postcss.json --dir ${npm_package_config_root}css ${npm_package_config_postcss_files}"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
