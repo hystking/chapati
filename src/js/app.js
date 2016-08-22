@@ -1,3 +1,9 @@
-import routes from "./routes"
+import index from "./index"
 
-routes(window.location.pathname)
+export default function routes(path) {
+  switch(path) {
+    case "/":
+    case "/index.html":
+      return index()
+  }
+}
