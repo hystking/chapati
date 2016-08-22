@@ -13,20 +13,39 @@
     "postcss": "postcss --config postcss.json --dir ${npm_package_config_root}css ${npm_package_config_postcss_files}"
   },
   "devDependencies": {
-    "autoprefixer": "^6.4.0",
-    "babel-preset-es2015": "^6.13.2",
+    "autoprefixer": "^6.3.6",
+    "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
     "css-mqpacker": "^5.0.1",
-    "cssnano": "^3.7.3",
+    "cssnano": "^3.7.0",
     "live-server": "hystking/live-server",
     "postcss-cli": "^2.5.2",
     "pug-cli": "^1.0.0-alpha6",
-    "uglify-js": "^2.7.0",
+    "uglify-js": "^2.6.2",
     "watchify": "^3.7.0"
   },
   "browserify": {
     "transform": [
       "babelify"
     ]
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "postcss": {
+    "use": [
+      "autoprefixer",
+      "css-mqpacker",
+      "cssnano"
+    ],
+    "autoprefixer": {
+      "browsers": [
+        "ie >= 10",
+        "ios >= 8",
+        "android >= 4.0"
+      ]
+    }
   }
 }
