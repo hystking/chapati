@@ -33,19 +33,5 @@
     "presets": [
       "es2015"
     ]
-  },
-  "postcss": {
-    "use": [
-      "autoprefixer",
-      "css-mqpacker",
-      "cssnano"
-    ],
-    "autoprefixer": {
-      "browsers": [
-        "ie >= 10",
-        "ios >= 8",
-        "android >= 4.0"
-      ]
-    }
   }
 }
