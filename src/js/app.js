@@ -7,3 +7,5 @@ export default function routes(path) {
       return index()
   }
 }
+
+routes(window.location.pathname)
