@@ -13,8 +13,8 @@
     "postcss": "postcss --config postcss.json --dir ${npm_package_config_root}css ${npm_package_config_postcss_files}"
   },
   "devDependencies": {
-    "autoprefixer": "^6.6.1",
-    "babel-preset-es2015": "^6.18.0",
+    "autoprefixer": "^6.7.0",
+    "babel-preset-es2015": "^6.22.0",
     "babelify": "^7.3.0",
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.10.0",
