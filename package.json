@@ -10,7 +10,7 @@
     "watch": "npm run watchify & npm run pug -- -w & npm run postcss -- --watch; wait",
     "watchify": "watchify src/js/app.js -o \"uglifyjs > ${npm_package_config_root}js/app.js\" -v",
     "pug": "pug ${npm_package_config_pug_files} -O pug.json -o ${npm_package_config_root}",
-    "postcss": "postcss --config postcss.json --dir ${npm_package_config_root}css ${npm_package_config_postcss_files}"
+    "postcss": "postcss --config postcss.config.js --dir ${npm_package_config_root}css ${npm_package_config_postcss_files} --no-map"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.0",
