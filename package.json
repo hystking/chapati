@@ -19,7 +19,7 @@
     "css-mqpacker": "^5.0.1",
     "cssnano": "^3.10.0",
     "live-server": "hystking/live-server",
-    "postcss-cli": "^2.6.0",
+    "postcss-cli": "^3.0.0-beta",
     "pug-cli": "^1.0.0-alpha6",
     "uglify-js": "^2.7.5",
     "watchify": "^3.8.0"
