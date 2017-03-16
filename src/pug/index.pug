@@ -2,23 +2,23 @@ extend base
 
 block append meta
   //- Meta Infomations
-  title= meta.title
-  meta(name="description", content=meta.description)
-  meta(name="keywords", content=meta.keywords)
+  title No Title
+  meta(name="description", content="")
+  meta(name="keywords", content="")
 
   //- Facebook OGP
-  meta(name="og:title", content=meta.title)
-  meta(name="og:description", content=meta.description)
+  meta(name="og:title", content="")
+  meta(name="og:description", content="")
   meta(name="og:type", content="website")
-  meta(name="og:url", content=meta.indexUrl)
-  meta(name="og:image", content=meta.ogImage)
-  meta(name="og:site_name", content=meta.title)
+  meta(name="og:url", content="")
+  meta(name="og:image", content="")
+  meta(name="og:site_name", content="")
 
   //- Twitter Card
   meta(name="twitter:card", content="summary_large_image")
-  meta(name="twitter:title", content=meta.title)
-  meta(name="twitter:description", content=meta.description)
-  meta(name="twitter:image:src", content=meta.ogImage)
+  meta(name="twitter:title", content="")
+  meta(name="twitter:description", content="")
+  meta(name="twitter:image:src", content="")
 
 block content
   p index.html
