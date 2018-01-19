@@ -7,28 +7,22 @@
   "scripts": {
     "start": "npm run serve & npm run watch",
     "serve": "live-server ${npm_package_config_root}",
-    "watch": "npm run watchify & npm run pug -- -w & npm run postcss -- --watch; wait",
-    "watchify": "watchify src/js/app.js -o \"uglifyjs > ${npm_package_config_root}js/app.js\" -v",
+    "watch": "npm run webpack -- -w & npm run pug -- -w & npm run postcss -- --watch; wait",
+    "webpack": "webpack --config webpack.config.js src/js/app.js ${npm_package_config_root}js/app.js",
     "pug": "pug ${npm_package_config_pug_files} -o ${npm_package_config_root} --pretty",
     "postcss": "postcss --config postcss.config.js --dir ${npm_package_config_root}css ${npm_package_config_postcss_files} --no-map"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
-    "babelify": "^8.0.0",
     "css-mqpacker": "^6.0.1",
     "cssnano": "^3.10.0",
     "live-server": "hystking/live-server",
     "postcss-cli": "^4.1.1",
     "pug-cli": "^1.0.0-alpha6",
-    "uglify-js": "^3.3.7",
-    "watchify": "^3.9.0"
-  },
-  "browserify": {
-    "transform": [
-      "babelify"
-    ]
+    "webpack": "^3.10.0"
   },
   "babel": {
     "presets": [
