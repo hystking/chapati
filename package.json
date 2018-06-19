@@ -9,7 +9,7 @@
     "serve": "live-server ${npm_package_config_root}",
     "watch": "npm run webpack -- -w --mode development & npm run pug -- -w & npm run postcss -- --watch; wait",
     "build": "npm run webpack -- --mode production & npm run pug & npm run postcss; wait",
-    "webpack": "webpack --config webpack.config.js src/js/app.js ${npm_package_config_root}js/app.js",
+    "webpack": "webpack-cli --config webpack.config.js",
     "pug": "pug ${npm_package_config_pug_files} -o ${npm_package_config_root} --pretty",
     "postcss": "postcss --config postcss.config.js --dir ${npm_package_config_root}css ${npm_package_config_postcss_files} --no-map"
   },
